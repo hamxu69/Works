@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="FaQs.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>FaQs</title>
-</head>
-<body>
-    <p>welcome to my soul society</p>
-</body>
+  </head>
+  <body>
+    <div class="mainDiv">
+        <div class="head">
+            <img src="icon-star.svg" alt="" srcset="">
+            <h1>FAQs</h1>
+        </div>
+        <div class="faqNotop">
+          <div class="click" onclick="toggle()">
+
+            <p>What is Frontend Mentor, and how will it help me?</p>
+            <img class="plus" src="icon-plus.svg" alt="" style="display: block;">
+            <img class="minus" src="icon-minus.svg" alt="" srcset="" style="display: none;">          </div>
+          <div class="para" style="display: none;">
+            <p class="ansOne">
+              Frontend Mentor offers realistic coding challenges to help developers improve their 
+              frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+              all levels and ideal for portfolio building.
+            </p>
+          </div>
+          <div class="new" style="height: 2px; width: 100%; background-color: rgba(145, 31, 31, 0.055);"></div>
+        </div>
+        <div class="faq">
+          <div class="click" onclick="toggle2()">
+
+            <p>  Is Frontend Mentor free?
+            </p>
+            <img class="plus2" src="icon-plus.svg" alt="" style="display: block;">
+            <img class="minus2" src="icon-minus.svg" alt="" srcset="" style="display: none;">
+          </div>
+          <div class="para2" style="display: none;">
+            <p class="ansOne">
+              Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+              option providing access to a range of projects suitable for all skill levels.
+            
+            </p>
+          </div>
+          <div class="new" style="height: 2px; width: 100%; background-color: rgba(145, 31, 31, 0.055);"></div>
+        </div>
+        <div class="faq">
+          <div class="click" onclick="toggle3()">
+
+            <p>  Can I use Frontend Mentor projects in my portfolio?
+            </p>
+            <img class="plus3" src="icon-plus.svg" alt="" style="display: block;">
+            <img class="minus3" src="icon-minus.svg" alt="" srcset="" style="display: none;">
+          </div>
+          <div class="para3" style="display: none;">
+            <p class="ansOne">
+              Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+              way to showcase your skills to potential employers!
+            </p>
+          </div>
+          <div class="new" style="height: 2px; width: 100%; background-color: rgba(145, 31, 31, 0.055);"></div>
+        </div>
+        <div class="faq">
+          <div class="click" onclick="toggle4()">
+
+            <p>  How can I get help if I'm stuck on a Frontend Mentor challenge?
+            </p>
+            <img class="plus4" src="icon-plus.svg" alt="" style="display: block;">
+            <img class="minus4" src="icon-minus.svg" alt="" srcset="" style="display: none;">
+          </div>
+          <div class="para4" style="display: none;">
+            <p class="ansOne">
+              The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+              channel where you can ask questions and seek support from other community members.
+            
+            </p>
+          </div>
+          <div class="new" style="height: 2px; width: 100%; background-color: rgba(145, 31, 31, 0.055);"></div>
+        </div>
+    </div>
+    <script src="FaQs.js">
+
+  </script>
+  </body>
 </html>
