@@ -25,6 +25,7 @@ body {
 }
 .click:hover {
     border-radius: 10px;
+    cursor: pointer;
     background-color: rgba(0, 0, 0, 0.048);
 }
 .click:active {
