@@ -16,13 +16,15 @@ body {
     width: 60%;
     margin-top: 10%;
 }
+
 .click {
-    display: flex;
+    display: flex ;
     justify-content: space-between;
     padding: 5px;
     border-radius: 10px;
     transition: 0.3s;
 }
+
 .click:hover {
     border-radius: 10px;
     cursor: pointer;
@@ -47,8 +49,20 @@ p {
     color: hsla(292, 42%, 14%, 0.747);
     font-family: "Work Sans", sans-serif;
     line-height: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
 }
 .faq {
     margin-top: 10px;
+}
+
+
+.displayBlock{
+    display: block !important;
+}
+
+.displayNone{
+    display: none !important;
 }
