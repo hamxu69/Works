@@ -135,12 +135,21 @@ function appendData(id, company, contact, country) {
   contacts.innerHTML = contact;
   countries.innerHTML = country;
   var tableRow = document.createElement("tr");
+  tableRow.classList.add(`tr-${id}`);
   var container = document.querySelector(".parent");
+  var btn = document.createElement("button");
+  btn.classList.add(`btn-${id}`);
+  btn.innerHTML = "Remove";
   tableRow.appendChild(ids);
   tableRow.appendChild(companies);
   tableRow.appendChild(contacts);
   tableRow.appendChild(countries);
+  tableRow.appendChild(btn);
   container.appendChild(tableRow);
+  btn.addEventListener("click", function () {
+    // mujhe ye nahi pata tha addEventListener k andr v function lag jata ha:/
+    tableRow.remove();
+  });
 }
 for (let i = 0; i < info.length; i++) {
   let dataInfo = info[i];

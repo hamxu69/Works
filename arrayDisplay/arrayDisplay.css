@@ -10,3 +10,29 @@ th {
   text-align: left;
   padding: 8px;
 }
+button {
+  background-color: rgba(238, 44, 44, 0.897);
+  color: #ffffff;
+  border-radius: 40px;
+  border-style: none;
+  padding: 10px;
+  margin: 5px;
+}
+button:hover {
+  background-color: rgba(238, 44, 44, 0.651);
+  color: #ffffff;
+  border-radius: 40px;
+  border-style: none;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+button:active {
+  background-color: rgba(238, 44, 44, 0.534);
+  color: #ffffff;
+  border-radius: 40px;
+  border-style: none;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
