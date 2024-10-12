@@ -192,7 +192,7 @@ $(document).ready(function() {
 
 function display() {
   let html = "";
-  loader.show
+  // loader.show
   if (data.length === 0) {
     return;
   }
@@ -247,7 +247,7 @@ function toggle(id) {
 
   // 2nd way 
 
-  const elm = document.querySelector(`#parent-${id}`)
+  const elm = document.querySelector(`#message-${id}`)
   if (elm.classList.contains("displayBlock")) {
     elm.classList.remove("displayBlock")
     elm.classList.add("displayNone")
