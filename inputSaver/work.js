@@ -1,43 +1,42 @@
-const data = [
-    { id: 1, company: "Tech Solutions", country: "USA", contact: "john@techsol.com" },
-    { id: 2, company: "Innovate Ltd", country: "UK", contact: "sarah@innovate.co.uk" },
-    { id: 3, company: "Global Ventures", country: "Germany", contact: "franz@globalventures.de" },
-    { id: 4, company: "Sunrise Inc.", country: "Japan", contact: "takashi@sunrise.jp" },
-    { id: 5, company: "GreenTech", country: "Australia", contact: "emily@greentech.au" },
-]  
-function tableAppend(id , company , country , contact, arrData) {
-    const ids = document.createElement('td');
-    const comps = document.createElement('td');
-    const counts = document.createElement('td');
-    const conts = document.createElement('td');
-    const btn = document.createElement('button');
-    const tableRow = document.createElement('tr');
-    const tbody = document.querySelector('.tdContainer')
-    const data = JSON.stringify(arrData)
-    ids.textContent = id;
-    comps.textContent = company;
-    counts.textContent = country;
-    conts.textContent = contact;
-    btn.classList.add(`btn-${id}`)
-    tableRow.classList.add(`tb-${id}`)
-    btn.innerHTML = 'Remove'
-    tableRow.appendChild(ids);
-    tableRow.appendChild(comps);
-    tableRow.appendChild(counts);
-    tableRow.appendChild(conts);
-    tableRow.appendChild(btn);
-    tbody.appendChild(tableRow)
-    btn.addEventListener('click' , function Remove() {
-        tableRow.remove()
+var btn = document.querySelector(".create");
+btn.addEventListener("click", create);
+function create() {
+  var id = document.querySelector(".id").value;
+  var Name = document.querySelector(".name").value;
+  var major = document.querySelector(".major").value;
+  var country = document.querySelector(".country").value;
+  if  (id && Name && major && country) {
+    
+    var newDiv = document.createElement("div");
+    newDiv.classList.add("background");
+    newDiv.innerHTML = ` <label for="id">
+          ID:
+          <input class="id" type="text" disabled value="${id}"/>
+        </label>
+        <label for="id">
+          Name: <input class="name" type="text" disabled value="${Name}"/>
+        </label>
+        <label for="id">
+          Major: <input class="major" type="text" disabled value="${major}"/>
+        </label>
+        <label for="id">
+          Country: <input class="country" type="text" disabled value="${country}"/>
+        </label>
+         <button class="removeButton">Remove</button>
+  
+        `;
+  
+    var container = document.querySelector(".container");
+    container.appendChild(newDiv)
+    document.querySelector(".id").value = '';
+    document.querySelector(".name").value = '';
+    document.querySelector(".major").value = '';
+    document.querySelector(".country").value = '';
+  
+    var removebtn = newDiv.querySelector(".removeButton").addEventListener('click' , function () {
+        newDiv.remove()
     })
+  } else {
+    alert('HELLO FILL THE SLOTS WRITE!')
+  }
 }
-for (let i = 0; i < data.length; i++) {
-    const arrData = data[i];
-    tableAppend(arrData.id , arrData.company , arrData.country ,arrData.contact, arrData )
-}
-const arrData = JSON.stringify(
-data);
-localStorage.setItem('stored', arrData)
-let array = JSON.parse(localStorage.getItem("myArray"));
- localStorage.removeItem(array[3])
-
