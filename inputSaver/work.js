@@ -25,7 +25,10 @@ function create() {
          <button class="removeButton">Remove</button>
   
         `;
-  
+        var Inputarray = [{ id: id, name: Name, major: major, country: country }
+        ]
+        localStorage.setItem('stored', JSON.stringify(Inputarray))
+      var storedarr = JSON.parse(localStorage.getItem('stored'))
     var container = document.querySelector(".container");
     container.appendChild(newDiv)
     document.querySelector(".id").value = '';
